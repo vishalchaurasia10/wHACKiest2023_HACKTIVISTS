@@ -40,10 +40,6 @@ const Login = () => {
                         <h1 className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 py-3 font-nunito text-2xl font-bold'>LOGIN</h1>
                         <form action="">
                             <div className='flex w-full flex-col space-y-6'>
-                                {/* <div className="email flex items-center px-2 py-1 border-2 rounded-lg border-[#E6E9F1]">
-                                    <FontAwesomeIcon className='w-3 h-3 pl-2' icon={faUserCircle} />
-                                    <input className='text-lg bg-transparent pl-4 p-2 outline-none text-[#ACB2BD] bg-white ' placeholder='Username' type="text" name="username" id="username" />
-                                </div> */}
                                 <div className="email flex items-center px-2 py-1 border-2 rounded-lg border-[#E6E9F1]">
                                     <FontAwesomeIcon className='w-3 h-3 pl-2' icon={faEnvelope} />
                                     <input className='text-lg bg-transparent pl-4 p-2 outline-none text-gray-500 bg-white ' placeholder='Email Id' type="email" name="email" id="email" />

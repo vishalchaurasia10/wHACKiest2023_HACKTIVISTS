@@ -24,10 +24,10 @@ const Navbar = () => {
         <div className={`topCenter hidden lg:flex lg:flex-row lg:h-7 lg:static justify-center lg:w-1/2`}>
             <ul className={`flex font-josefin font-bold text-2xl z-10 space-x-6 `}>
                 <li className='transition-all duration-300 hover:text-pink-500'><Link href='/'>Home</Link></li>
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/blogs'>Group Study</Link></li>
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/aboutme'>Self Study</Link></li>
+                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/groupStudy'>Group Study</Link></li>
+                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/selfStudy'>Self Study</Link></li>
                 {/* <li className='hover:text-white'><Link href='/services'>Services</Link></li> */}
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/contactme'>Market Place</Link></li>
+                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/marketPlace'>Market Place</Link></li>
             </ul>
         </div>
         <div className="topRight w-1/2 lg:w-1/4 flex justify-end items-center mr-1 lg:mr-24 space-x-2 lg:space-x-6">
