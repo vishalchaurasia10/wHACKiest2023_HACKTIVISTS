@@ -65,8 +65,8 @@ const Login = () => {
                         </form>
                         <div className='horizontalRule mx-auto h-[0.1rem] relative my-3 w-[30%] bg-[#FE538D]'></div>
                         <div className="google pb-3 flex justify-center space-x-4 items-center">
-                            <FontAwesomeIcon className='text-[#ACB2BD] text-xl hover:text-gray-400' icon={faGoogle} />
-                            <FontAwesomeIcon className='text-[#ACB2BD] text-xl hover:text-gray-400' icon={faGithub} />
+                            <FontAwesomeIcon className='h-6 w-6 text-[#ACB2BD] text-xl hover:text-gray-400' icon={faGoogle} />
+                            <FontAwesomeIcon className='h-6 w-6 text-[#ACB2BD] text-xl hover:text-gray-400' icon={faGithub} />
                         </div>
                         <div className="login flex items-center space-x-1 justify-center text-sm">
                             <span>New User?</span> <Link href='/register' className='text-[#FE538D]'>Sign Up</Link>
