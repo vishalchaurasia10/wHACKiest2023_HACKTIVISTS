@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faPenToSquare, faSearch, faUserCircle} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenToSquare, faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 
 const Navbar = () => {
   const user = false
-  const [expand,setExpand] = useState(0)
+  const [expand, setExpand] = useState(0)
 
   const changeExpand = () => {
-    if(expand === 0)
-    {
+    if (expand === 0) {
       setExpand(1)
     }
     else setExpand(0)
   }
+
+  const [remember, setRemember] = useState(0);
+    const changeRemember = () => {
+        if (remember === 0) {
+            setRemember(1)
+        } else {
+            setRemember(0)
+        }
+    }
 
   return (
     <div>
@@ -22,21 +30,26 @@ const Navbar = () => {
           <h1 className='text-2xl font-extrabold '>Histitute</h1>
         </div>
         <div className={`topCenter hidden lg:flex lg:flex-row lg:h-7 lg:static justify-center lg:w-1/2`}>
-            <ul className={`flex font-josefin font-bold text-2xl z-10 space-x-6 `}>
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/'>Home</Link></li>
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/groupStudy'>Group Study</Link></li>
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/selfStudy'>Self Study</Link></li>
-                {/* <li className='hover:text-white'><Link href='/services'>Services</Link></li> */}
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/marketPlace'>Market Place</Link></li>
-            </ul>
+          <ul className={`flex font-josefin font-bold text-2xl z-10 space-x-6 `}>
+            <li className='transition-all duration-300 hover:text-pink-500'><Link href='/'>Home</Link></li>
+            <li className='transition-all duration-300 hover:text-pink-500'><Link href='/groupStudy'>Group Study</Link></li>
+            <li className='transition-all duration-300 hover:text-pink-500'><Link href='/selfStudy'>Self Study</Link></li>
+            {/* <li className='hover:text-white'><Link href='/services'>Services</Link></li> */}
+            <li className='transition-all duration-300 hover:text-pink-500'><Link href='/marketPlace'>Market Place</Link></li>
+          </ul>
         </div>
         <div className="topRight w-1/2 lg:w-1/4 flex justify-end items-center mr-1 lg:mr-24 space-x-2 lg:space-x-6">
           <FontAwesomeIcon className=' w-6 h-6 hover:text-gray-700' icon={faSearch} />
-          <Link href={user?'/write':'/login'}>
+          {/* <Link href={user?'/write':'/login'}>
           <FontAwesomeIcon className='hidden lg:block w-6 h-6 hover:text-gray-700' icon={faPenToSquare}/>
-          </Link>
-          <Link href={user?'/settings':'/login'}>
-          <FontAwesomeIcon className='loginImage w-6 h-6 hover:text-gray-700' icon={faUserCircle} />
+          </Link> */}
+          <div className="rememberMe flex items-center">
+            <input onClick={changeRemember} className="h-5 w-8 appearance-none bg-transparent bg-white border border-[rgba(0,0,0)] rounded-full" type="checkbox" name="remember" id="remember" title="Remember me" />
+            <div onClick={changeRemember} className={`switch transition-all duration-300 relative ${remember === 0 ? '-left-[1.9rem]' : '-left-[1.1rem]'} border border-gray-300 bg-black h-[1rem] w-[1rem] rounded-full`} id=""></div>
+            <label className='-ml-2' htmlFor="remember"></label>
+          </div>
+          <Link href={user ? '/settings' : '/login'}>
+            <FontAwesomeIcon className='loginImage w-6 h-6 hover:text-gray-700' icon={faUserCircle} />
           </Link>
           <ul onClick={changeExpand} id='expandNav' className="expand lg:hidden pb-1 flex flex-col space-y-1">
             <li className={`bar transition-all relative duration-300 ${expand === 1 ? 'rotate-45 top-[0.45rem]' : 'rotate-0'} w-6 h-[0.2rem] bg-gray-500 rounded-xl`}></li>
@@ -46,14 +59,14 @@ const Navbar = () => {
         </div>
       </nav>
       <div className={`backdrop-blur-md ${expand === 0 ? '-left-[25rem]' : 'left-0'} bg-[rgba(255,255,255,0.1)] fixed z-40 bg-opacity-25 rounded-md shadow-xl transition-all duration-300 topCenter h-screen w-screen flex items-center text-center lg:hidden justify-center`}>
-            <ul className={`flex text-gray-500 flex-col space-y-4 font-josefin font-bold text-3xl z-10`}>
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/'>Home</Link></li>
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/blogs'>Blogs</Link></li>
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/aboutme'>About Me</Link></li>
-                {/* <li className='hover:text-white'><Link href='/services'>Services</Link></li> */}
-                <li className='transition-all duration-300 hover:text-pink-500'><Link href='/contactme'>Contact Me</Link></li>
-            </ul>
-        </div>
+        <ul className={`flex text-gray-500 flex-col space-y-4 font-josefin font-bold text-3xl z-10`}>
+          <li className='transition-all duration-300 hover:text-pink-500'><Link href='/'>Home</Link></li>
+          <li className='transition-all duration-300 hover:text-pink-500'><Link href='/blogs'>Blogs</Link></li>
+          <li className='transition-all duration-300 hover:text-pink-500'><Link href='/aboutme'>About Me</Link></li>
+          {/* <li className='hover:text-white'><Link href='/services'>Services</Link></li> */}
+          <li className='transition-all duration-300 hover:text-pink-500'><Link href='/contactme'>Contact Me</Link></li>
+        </ul>
+      </div>
     </div>
   )
 }

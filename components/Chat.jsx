@@ -14,7 +14,7 @@ const Chat = () => {
         <>
         <Sidebar expand={expand} />
             <div className='w-1/2 h-full mt-48 mr-20'>
-                <div className={`messageContainer ${expand ? 'scale-100' : "scale-0"} transition-all duration-500 overflow-auto mr-8 h-3/4 w-full bg-gradient-to-r from-[#f87171] to-[#7c3aed] px-4 py-12 bg-[rgba(255,255,255)] text-[#392E33]  rounded-xl shadow-xl flex flex-col space-y-12  m-1 `}>
+                <div className={`messageContainer ${expand ? 'scale-100' : "scale-0"} transition-all duration-500 overflow-auto mr-8 h-3/4 w-full px-4 py-12 bg-[rgba(255,255,255)] text-[#392E33]  rounded-xl shadow-xl flex flex-col space-y-12  m-1 `}>
                     <div className={`message ${expand ? 'scale-100' : "scale-0"} transition-all duration-700`}>
                         <div className='backdrop-blur-md float-left clear-both bg-[rgba(255,255,255,0.1)] text-[#392E33] bg-opacity-25 rounded-xl shadow-xl flex  items-center space-x-4 my-4 py-4 px-4'>
                             <div className="avatar">

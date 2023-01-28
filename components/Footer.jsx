@@ -5,7 +5,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <>
-            <div className="bg bg-[url('/footer.svg')]">
+            <div className="bg z-50 relative bg-[url('/footer.svg')]">
                 <div className="text-lg text-[#392E33] tracking-wide pt-8 pb-8 text-center font-Poppins font-extrabold bg-clip-text flex justify-center items-center">
                     <h2 className=''>Meet our
                         <span className='font-Poppins text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#7c3aed] to-[#f87171]'> Developers.</span>

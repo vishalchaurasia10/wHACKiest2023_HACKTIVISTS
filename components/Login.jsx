@@ -56,7 +56,9 @@ const Login = () => {
                                     </div>
                                     <Link className='hover:text-[#ACB2BD]' href='/'>Forgot Password?</Link>
                                 </div>
-                                <button className='py-2 mt-8 w-1/2 mx-auto hover:-translate-y-[0.1rem] text-white  bg-[#FE538D] duration-150 font-nunito font-semibold border rounded-md px-3 shadow-[#FE538D] border-[rgba(255,255,255,0.1)]'>Login</button>
+                                <button className='py-2 mt-8 w-1/2 mx-auto hover:-translate-y-[0.1rem] text-white  bg-[#FE538D] duration-150 font-nunito font-semibold border rounded-md px-3 shadow-[#FE538D] border-[rgba(255,255,255,0.1)]'>
+                                    <Link href='/'>Login</Link>
+                                </button>
                             </div>
                         </form>
                         <div className='horizontalRule mx-auto h-[0.1rem] relative my-3 w-[30%] bg-[#FE538D]'></div>
