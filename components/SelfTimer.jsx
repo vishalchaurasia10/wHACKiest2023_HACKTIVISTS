@@ -1,11 +1,10 @@
 import { faPause, faPlay, faRefresh } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState, useEffect } from 'react'
-import Chat from './Chat'
 import Music from './Music'
 import Image from 'next/image'
 
-const Timer = () => {
+const SelfTimer = () => {
     const [seconds, setSeconds] = useState(1500) // initial value of 1500 seconds (25 minutes)
     const [isRunning, setIsRunning] = useState(false) // keeps track of whether the timer is currently running
 
@@ -21,26 +20,28 @@ const Timer = () => {
 
     const handleStart = () => {
         setIsRunning(true)
-        document.getElementById('mainbody').classList.remove('bg-[url("/home_background.svg")]')
+        document.getElementById('mainbody').classList.remove('bg-[url("/home_background5.svg")]')
         document.getElementById('mainbody').classList.add('bg-[url("/home_background4.svg")]')
     }
-
+    
     const handlePause = () => {
         setIsRunning(false)
         document.getElementById('mainbody').classList.remove('bg-[url("/home_background4.svg")]')
-        document.getElementById('mainbody').classList.add('bg-[url("/home_background.svg")]')
+        document.getElementById('mainbody').classList.add('bg-[url("/home_background5.svg")]')
     }
-
+    
     const handleReset = () => {
         setSeconds(1500)
         setIsRunning(false)
+        document.getElementById('mainbody').classList.remove('bg-[url("/home_background4.svg")]')
+        document.getElementById('mainbody').classList.add('bg-[url("/home_background5.svg")]')
     }
 
     const minutes = Math.floor(seconds / 60)
     const remainingSeconds = seconds % 60
     return (
         <>
-            <div id='mainbody' className='flex bg-[url("/home_background.svg")] bg-cover bg-center  h-screen w-full justify-center items-center'>
+            <div id='mainbody' className='flex bg-[url("/home_background5.svg")] bg-cover bg-center  h-screen w-full justify-center items-center'>
                 <div className='w-3/4 px-36'>
                     <div className="flex justify-end items-center streak">
                         <span className='font-nunito text-[#392E33] font-extrabold text-lg'>3</span>
@@ -62,15 +63,9 @@ const Timer = () => {
                     </div>
                     <Music />
                 </div>
-                <Chat />
             </div>
         </>
     )
 }
 
-export default Timer
-
-
-
-
-
+export default SelfTimer

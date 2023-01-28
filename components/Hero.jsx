@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
           <div className='flex flex-col space-y-4'>
             <div className='img2 shadow-2xl z-40'>
-              <Image className='rounded-xl relative h-72 w-96' src='/hero1.jfif' width={500} height={500} alt='hero image' />
+              <Image className='rounded-xl relative h-72 w-96' src='/hero1.jpg' width={500} height={500} alt='hero image' />
             </div>
             <div className='img3 ml-4  w-max  shadow-2xl z-40'>
               <Image className='rounded-xl relative inline-block h-48 w-72' src='/hero3.jpg' width={500} height={500} alt='hero image' />

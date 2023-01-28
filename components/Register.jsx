@@ -17,7 +17,7 @@ const Register = () => {
                     <div className='text-[#392E33] text-lg font-bold tracking-wide lg:text-lg px-4 lg:px-16 pt-24 lg:pt-16 text-center'>
                         <span className='font-Poppins text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#f87171] to-[#7c3aed]'>Welcome! </span>
                          to 
-                         <span className='font-Poppins text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#f87171] to-[#7c3aed]'> The Daily Scoop. </span> 
+                         <span className='font-Poppins text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#f87171] to-[#7c3aed]'> Histitute </span> 
                          Join our community and access exclusive content by signing up now!
                          </div>
                     <Image className='lg:hidden' src='/signupmobile.svg' width={500} height={500} alt='loginImage' />

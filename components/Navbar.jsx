@@ -19,7 +19,7 @@ const Navbar = () => {
     <div>
       <nav className='backdrop-blur-md bg-[rgba(255,255,255,0.1)] text-gray-500 w-full bg-opacity-25 rounded-md shadow-xl py-3 flex fixed top-0 z-50 m-1 p-1 items-center'>
         <div className="topLeft flex items-center lg:ml-24 w-1/2 lg:w-1/4">
-          <h1 className='text-2xl font-extrabold '>All Niters</h1>
+          <h1 className='text-2xl font-extrabold '>Histitute</h1>
         </div>
         <div className={`topCenter hidden lg:flex lg:flex-row lg:h-7 lg:static justify-center lg:w-1/2`}>
             <ul className={`flex font-josefin font-bold text-2xl z-10 space-x-6 `}>
